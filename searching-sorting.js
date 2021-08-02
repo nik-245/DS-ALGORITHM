@@ -12,7 +12,7 @@ function sort(arr, n) {
     arr[j + 1] = temp;
   }
 }
-/*-------------------------------------------------swap xp to the yp-------------------------------------------*/
+/*-------------------------------------------------swap xp to the yp index-------------------------------------------*/
 function swap(arr, xp, yp) {
   var temp = arr[xp];
   arr[xp] = arr[yp];
@@ -239,10 +239,30 @@ function productArray(arr){
      
   return product;
 }
+/*----------------minimum number of swap required to sort the array-----------------------*/
+function minSwapCount(arr){
+      let ans = 0;
+      let temp = [...arr];
+      temp.sort((a,b)=> a-b);
 
-document.write(productArray([ 10, 3, 5, 6, 2 ]));
+      for(let i in temp){
+       
+        if(arr[i] != temp[i]){
+          ans++;
+          let j = arr.indexOf(temp[i])
+          let Temp = arr[i];
+          arr[i] = arr[j];
+          arr[j] = Temp; 
+        }
+      }
+      return ans;
+}
+
+let arr = [1,5,4,3,2];
+document.write(minSwapCount(arr));
 /*---------------------------------------dirver code for this algo-----------------------*/
 // fourSum([-2, -1, 0, 0, 1, 2], 0);
+// document.write(productArray([ 10, 3, 5, 6, 2 ]));
 // document.write(countTriplate([5 ,1 , 3 , 4 ,7] , 12));
 // findMajority([1,1,2,1,3,5,1] , 7);
 // findMissingReapiting([4, 3, 6, 2, 1, 6, 7]);
