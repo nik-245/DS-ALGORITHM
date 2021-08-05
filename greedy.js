@@ -1,4 +1,4 @@
-/* Activity Selection Problem usign dynamic programing*/
+/* Activity Selection Problem usign greddy programing*/
 
 let printMaxActivities = (start, end, n) => {
   let i, j;
