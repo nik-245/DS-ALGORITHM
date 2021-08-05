@@ -259,7 +259,7 @@ function minSwapCount(arr){
 }
 
 let arr = [1,5,4,3,2];
-document.write(minSwapCount(arr));
+// document.write(minSwapCount(arr));
 /*---------------------------------------dirver code for this algo-----------------------*/
 // fourSum([-2, -1, 0, 0, 1, 2], 0);
 // document.write(productArray([ 10, 3, 5, 6, 2 ]));
